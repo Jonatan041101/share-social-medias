@@ -54,17 +54,14 @@ function Share() {
         <meta name="description" content="Home de la tienda" />
         <meta
           property="og:url"
-          content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html"
+          content="https://share-social-medias-4odn.vercel.app/"
         />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="titulo para el home de la tienda" />
-        <meta
-          property="og:description"
-          content="esta es la decripcion del home de la tienda"
-        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tap4Change" />
+        <meta property="og:description" content="Tap4Change description" />
         <meta
           property="og:image"
-          content="https://media.gettyimages.com/photos/bogota-at-sunset-picture-id107069344?s=612x612"
+          content="https://github.githubassets.com/assets/campaign-social-031d6161fa10.png"
         />
       </Helmet>
       <h1>esta es la pagina del home</h1>

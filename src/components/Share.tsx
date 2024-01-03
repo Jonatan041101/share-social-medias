@@ -61,7 +61,10 @@ function Share() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Tap4Change" />
         <meta property="og:description" content="Tap4Change description" />
-        <meta property="og:image" content={avatar} />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/damjxqb5f/image/upload/v1704225504/avatar_7_ftmrh8.png"
+        />
       </Helmet>
       <button
         onClick={() => {

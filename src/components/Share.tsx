@@ -38,11 +38,11 @@ function Share() {
       {
         method: "share",
         href: "https://stackoverflow.com/questions/62581079/dynamic-opengraph-tags-for-spa-react-application/75234916#75234916",
-        quote: "Este es el título que quieres compartir", // Título
-        hashtag: "#MiHashtag", // Hashtag opcional
-        redirect_uri: "https://tu-url-de-redireccion.com", // URL de redirección opcional
-        picture: "https://enlace-de-la-imagen.com", // Enlace de la imagen
-        description: "Esta es la descripción que quieres compartir", // Descripción
+        // quote: "Este es el título que quieres compartir", // Título
+        // hashtag: "#MiHashtag", // Hashtag opcional
+        // redirect_uri: "https://tu-url-de-redireccion.com", // URL de redirección opcional
+        // picture: "https://enlace-de-la-imagen.com", // Enlace de la imagen
+        // description: "Esta es la descripción que quieres compartir", // Descripción
       },
       function (response) {
         console.log(response, "response");
@@ -54,7 +54,7 @@ function Share() {
       Share on:
       <Helmet>
         <title>HELMET</title>
-        <meta
+        {/* <meta
           property="og:url"
           content="https://share-social-medias-4odn.vercel.app/"
         />
@@ -64,7 +64,7 @@ function Share() {
         <meta
           property="og:image"
           content="https://res.cloudinary.com/damjxqb5f/image/upload/v1704225504/avatar_7_ftmrh8.png"
-        />
+        /> */}
       </Helmet>
       <button
         onClick={() => {

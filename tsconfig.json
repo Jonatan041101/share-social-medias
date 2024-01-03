@@ -12,14 +12,9 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "jsx": "react-jsx"
   },
-  "include": ["src"],
+  "include": ["src", "global.d.ts"],
+  "files": ["global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

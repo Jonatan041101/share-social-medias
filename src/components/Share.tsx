@@ -1,29 +1,36 @@
 import React, { useEffect } from "react";
 // import "./Share.css";
-import { FacebookShareButton, FacebookIcon } from "react-share";
-interface ShareProps {
-  description: string;
-}
+
 import Helmet from "react-helmet";
-function Share({ description }: ShareProps) {
+
+declare const FB: {
+  init: any;
+  ui: any;
+};
+
+function Share() {
   useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
+    function init() {
       window.fbAsyncInit = function () {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         FB.init({
           appId: "379573221399993",
           xfbml: true,
           version: "v18.0",
         });
       };
-    });
+    }
+    document.addEventListener("DOMContentLoaded", init);
 
     // Código de limpieza para quitar el listener cuando el componente se desmonte
     return () => {
-      document.removeEventListener("DOMContentLoaded", () => {});
+      document.removeEventListener("DOMContentLoaded", init);
     };
   }, []);
   function share() {
     console.log("HOLA MUNDO");
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-call
     FB.ui(
       {
         method: "share",

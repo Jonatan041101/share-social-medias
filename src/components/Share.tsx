@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 // import "./Share.css";
 
 import Helmet from "react-helmet";
@@ -9,6 +9,9 @@ declare const FB: {
 };
 
 function Share() {
+  const [avatar, setAvatar] = useState<string>(
+    `https://api.multiavatar.com/${Date.now()}.svg`
+  );
   useEffect(() => {
     function init() {
       window.fbAsyncInit = function () {
@@ -51,7 +54,6 @@ function Share() {
       Share on:
       <Helmet>
         <title>HELMET</title>
-        <meta name="description" content="Home de la tienda" />
         <meta
           property="og:url"
           content="https://share-social-medias-4odn.vercel.app/"
@@ -59,11 +61,13 @@ function Share() {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Tap4Change" />
         <meta property="og:description" content="Tap4Change description" />
-        <meta
-          property="og:image"
-          content="https://github.githubassets.com/assets/campaign-social-031d6161fa10.png"
-        />
+        <meta property="og:image" content={avatar} />
       </Helmet>
+      <button
+        onClick={() => {
+          setAvatar(`https://api.multiavatar.com/${Date.now()}.svg`);
+        }}
+      ></button>
       <h1>esta es la pagina del home</h1>
       <button onClick={share}></button>
     </>
